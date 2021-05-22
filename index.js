@@ -11,9 +11,35 @@ const questions = [
     // Project title
     {
         type: 'input',
+        name: 'username',
+        message: 'Enter your GitHub username',
+        default: '',
+        validate: function(answer) {
+            if (answer.length < 1) {
+                return console.log('You muss enter your Github username')
+            }
+            return true;
+        }
+
+    },
+    {
+        type: 'input',
+        name: 'repo',
+        message: 'provide your Github repo',
+        default: '',
+        validate: function(answer) {
+            if (answer.length < 1) {
+                return console.log('You Github repo is required')
+            }
+            return true;
+        }
+
+    },
+    {
+        type: 'input',
         name: 'title',
         message: 'Enter the title of your project',
-        defaut: 'Project Title',
+        default: 'Project Title',
         validate: function(answer) {
             if (answer.length < 1) {
                 return console.log('You muss enter the title of your project')
@@ -26,9 +52,9 @@ const questions = [
     // Project description
     {
         type: 'input',
-        name: 'Description',
+        name: 'description',
         message: 'Provide a descriptuon of your project',
-        defaut: 'Project Description',
+        default: 'Project Description',
         validate: function(answer) {
             if (answer.length < 1) {
                 return console.log('A description of your project is required')
@@ -43,9 +69,9 @@ const questions = [
 
     {
         type: 'input',
-        name: 'Installation',
+        name: 'installation',
         message: 'Provide the installation instructions of your project',
-        defaut: 'Installation Instructions',
+        default: 'Installation Instructions',
         validate: function(answer) {
             if (answer.length < 1) {
                 return console.log('Installation instructions of your project are required')
@@ -59,9 +85,9 @@ const questions = [
 
     {
         type: 'input',
-        name: 'Usage',
+        name: 'usage',
         message: 'Provide the usage information relative to your project',
-        defaut: 'Usage Information',
+        default: 'Usage Information',
         validate: function(answer) {
             if (answer.length < 1) {
                 return console.log('Usage information relative to your project is required')
@@ -75,9 +101,9 @@ const questions = [
 
     {
         type: 'input',
-        name: 'Guidlines',
+        name: 'guidlines',
         message: 'Provide guidlines for others developers, which can be interrested to contribute to your project',
-        defaut: 'Guidlines',
+        default: 'Guidlines',
         validate: function(answer) {
             if (answer.length < 1) {
                 return console.log('Contribution guidlines to your project are required')
@@ -87,13 +113,13 @@ const questions = [
 
     },
 
-    // Text instrcutions
+    // Test instrcutions
 
     {
         type: 'input',
-        name: 'Test',
+        name: 'test',
         message: 'Provide instruction how to run and test your application',
-        defaut: 'Test Instructions',
+        default: 'Test Instructions',
         validate: function(answer) {
             if (answer.length < 1) {
                 return console.log('Test instructions how to run the applications are required')
@@ -106,7 +132,7 @@ const questions = [
     // License
     {
         type: 'input',
-        name: 'License',
+        name: 'license',
         message: 'Choice a license for your project',
         choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
         validate: function(answer) {
