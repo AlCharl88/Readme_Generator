@@ -122,10 +122,38 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+    err ? console.error(err) : console.log('Success! Your Readme.md file has been generated')
+  );
+}
+
+const writeFileAsync = util.promisify(writeToFile);
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    try {
+        // Prompt inquirer questions
+        const userResponses = await inquirer.prompt(questions);
+        console.log("Your Responses: ", userResponses);
+        console.log("Thank for your responses");
+
+        //  Call Github api for user info
+        const userInfo = await api.getUser(userResponses);
+        console.log("Your Github user info: ", userInfo);
+
+        // Insert inquirer userReponses and Gthub userInfo into  generateMarkdown
+        console.log("Generating your Readme file");
+        const markdown = generateMarkdown(userResponses, userInfo);
+        console.log(markdown);
+
+        // Write markdown to file
+        await writeFileAsync('Your Readme.md', markdown);
+    } catch(err) {
+        console.log(err);
+    }
+    
+};
 
 // Function call to initialize app
 init();
