@@ -131,7 +131,7 @@ const questions = [
 
     // License
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: 'Choice a license for your project',
         choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
@@ -174,7 +174,7 @@ async function init() {
         console.log(markdown);
 
         // Write markdown to file
-        await writeFileAsync('ExampleReadme.md', markdown);
+        await writeFileAsync('RExampleReadme.md', markdown);
     } catch(error) {
         console.log(error);
     }
