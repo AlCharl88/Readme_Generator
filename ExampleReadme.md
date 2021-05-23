@@ -5,7 +5,14 @@
 
   When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions&mdash;this last part increases the likelihood that other developers will contribute to the success of the project. 
 
-  ## Table of Content * [Description](#descripton) * [Installation](#installation) * [Usage](#usage) * [Guidlines](#guidlines) * [Test](#test) * [License](#license) * [License](#license)
+  ## Table of Content 
+  * [Description](#descripton) 
+  * [Installation](#installation) 
+  * [Usage](#usage) 
+  * [Guidlines](#guidlines) 
+  * [Test](#test) 
+  * [License](#license) 
+  * [License](#license)
     
   ### Installation
     
@@ -48,10 +55,10 @@
     
   ###### Questions
 
-    AlCharl88
-    ![Developer Profile Picture](https://avatars.githubusercontent.com/u/80181038?v=4) 
+  AlCharl88
+  ![Developer Profile Picture](https://avatars.githubusercontent.com/u/80181038?v=4) 
   
-    For any additinal question, please contact me with the information below:
+  For any additinal question, please contact me with the information below:
    
-    GitHub: [@AlCharl88](https://api.github.com/users/AlCharl88)
+  GitHub: [@AlCharl88](https://api.github.com/users/AlCharl88)
     
