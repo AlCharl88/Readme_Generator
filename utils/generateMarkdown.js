@@ -7,10 +7,6 @@ const mozillaText = "Permissions of this weak copyleft license are conditioned o
 const inqversion = "![npm](https://img.shields.io/npm/v/inquirer)";
 const inqText = "Copyright (c) 2016 Simon Boudrias (twitter: @vaxilart) Licensed under the MIT license.";
 
-const gitstats = "![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=";
-const gitlanguages = "![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=";
-const follow = "[![GitHub followers](https://img.shields.io/github/followers/";
-
 
 let licenseLink = "";
 let licenseText = "";
